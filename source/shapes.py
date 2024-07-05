@@ -19,3 +19,14 @@ class Circle(Shape):
     def perimeter(self):
         return math.pi * 2 * self.radius
 
+class Rectangle(Shape):
+    def __init__(self, length, width) -> None:
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+    
+    def perimeter(self):
+        return (self.width + self.length) * 2
+    
