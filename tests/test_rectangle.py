@@ -1,6 +1,6 @@
-import pytest
+# import pytest
 
-import source.shapes as shapes
+# import source.shapes as shapes
 
 def test_area(rectangle):
     assert rectangle.area() == 200

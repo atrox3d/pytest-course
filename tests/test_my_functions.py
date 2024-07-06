@@ -36,8 +36,12 @@ def test_divide_by_zero():
 def test_slow():
     ''' simulating long test '''
     import time
-    time.sleep(5)
+    time.sleep(1)
 
     result = my_functions.divide(10, 5)
     assert result == 2
-    
+
+@pytest.mark.skip(reason='testing mark.skip')
+def test_skip():
+    print(f'skip')
+    assert True
