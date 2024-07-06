@@ -1,5 +1,5 @@
 # import pytest
-import source.shapes as shapes
+from source.circle import Circle
 
 def setup_module(module):
     print(f'setting up MODULE {module}')
@@ -14,7 +14,7 @@ class TestCircle:
 
     def setup_method(self, method):
         print(f'setting up METHOD{method}')
-        self.circle = shapes.Circle(10)
+        self.circle = Circle(10)
 
     def test_area(self):
         assert self.circle.area() == 314.1592653589793

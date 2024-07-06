@@ -1,11 +1,11 @@
 import pytest
-from source import shapes
+from source.rectangle import Rectangle
 
 
 @pytest.fixture
 def rectangle():
-    return shapes.Rectangle(10, 20)
+    return Rectangle(10, 20)
 
 @pytest.fixture
 def square():
-    return shapes.Rectangle(10, 10)
+    return Rectangle(10, 10)
