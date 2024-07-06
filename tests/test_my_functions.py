@@ -45,3 +45,7 @@ def test_slow():
 def test_skip():
     print(f'skip')
     assert True
+
+@pytest.mark.xfail(reason='division by zero')
+def test_zero_error():
+    my_functions.divide(4, 0)
