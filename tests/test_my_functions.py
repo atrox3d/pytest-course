@@ -28,3 +28,16 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         my_functions.divide(10, 0)
+
+# slow is registered into pytest.ini
+# use -m "not slow" to skip test
+# https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+@pytest.mark.slow
+def test_slow():
+    ''' simulating long test '''
+    import time
+    time.sleep(5)
+
+    result = my_functions.divide(10, 5)
+    assert result == 2
+    

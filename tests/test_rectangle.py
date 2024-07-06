@@ -10,4 +10,3 @@ def test_perimeter(rectangle):
 
 def test_not_equal(rectangle, square):
     assert rectangle != square
-
